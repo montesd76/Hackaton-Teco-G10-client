@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.login {
+  display: flex;
+
+  font-family: "Roboto", sans-serif;
+
+  color: white;
+
+  justify-content: center;
+
+  align-items: center;
+
+  width: 100%;
+
+  padding: 4rem 6rem;
+}
+.login-container {
+  background: #0d0d0d;
+
+  border-radius: 20px;
+
+  padding: 2rem;
+
+  min-width: 30%;
+  border: 1px solid #23d9a5;
+}
+.login-container h2 {
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 42px;
+  margin-bottom: 40px;
+  text-align: center;
+
+  margin-top: 20px;
+  color: #23d9a5;
+}
+
+.login-formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.login-formGroup label {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.login-formGroup input {
+  background: #0d0d0d;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  outline: none;
+  border: 1px solid #23d9a5;
+  color: #fff;
+  font-size: 16px;
+  line-height: 26px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.login-reg-writeButton {
+  background-color: #23d9a5;
+  border: 1px solid #23d9a5;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  color: #0d0d0d;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  margin: 2rem;
+}
