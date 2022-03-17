@@ -12,8 +12,8 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
+          <Route exact path="/" element={<Login />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/player" element={<Player />} />
           <Route path="*" element={<Error />} />
         </Routes>

@@ -8,16 +8,20 @@ export const Login = () => {
     showPassword: false,
   });
 
-  console.log(user);
   return (
     <div className="login">
       <div className="login-container">
         <h2>Mini Flow</h2>
-        <form className="login-formGroup">
+        <form
+          className="login-formGroup"
+          method="POST"
+          action="https://miniflow2022.herokuapp.com/auth/login"
+        >
           <label htmlFor="">
             <input
               type="text"
               id="email"
+              name="email"
               value={user.email}
               onChange={(e) => setUser({ ...user, email: e.target.value })}
               placeholder="Ingrese su Correo"
@@ -27,6 +31,7 @@ export const Login = () => {
             <input
               type={user.showPassword ? "text" : "password"}
               id="password"
+              name="password"
               value={user.password}
               onChange={(e) => setUser({ ...user, password: e.target.value })}
               placeholder="Contraseña"
@@ -43,7 +48,9 @@ export const Login = () => {
               }
             />
           </label>
-          <button className="login-reg-writeButton">INICIAR SESION</button>
+          <button type="submit" className="login-reg-writeButton">
+            INICIAR SESION
+          </button>
         </form>
       </div>
     </div>
