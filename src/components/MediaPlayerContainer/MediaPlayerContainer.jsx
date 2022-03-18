@@ -12,7 +12,7 @@ export const MediaPlayerContainer = () => {
         `https://miniflow2022.herokuapp.com/insecure/api/contents/${movieID}`
       );
       const data = response.data;
-        console.log(data);
+      console.log(data);
 
       setFilm(data[0]);
     };

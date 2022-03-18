@@ -10,6 +10,7 @@ export const MediaContainer = () => {
       const response = await axios.get(
         "https://miniflow2022.herokuapp.com/insecure/api/contents"
       );
+      console.log("soy la response general", response);
       const data = response.data;
       setMovies(data);
     };

@@ -1,0 +1,18 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+
+.card-container-card {
+  margin: 0 -5px;
+}
+
+.card-container-card:after {
+  content: "";
+  display: table;
+  clear: both;
+}
