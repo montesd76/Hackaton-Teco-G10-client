@@ -1,19 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 .navBarContainer {
   display: flex;
   justify-content: space-between;
-
-  padding: 2rem 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(30, 190, 9, 0.24);
+  padding: 0.5rem 0.5rem;
+  box-shadow: 0 0.3rem 0.1rem rgba(30, 190, 9, 0.24);
 }
 
 .navBar {
   flex: 1;
   justify-content: flex-end;
   align-items: flex-start;
+  text-align: right;
 }
 
 .navLink {
-  color: white;
+  color: #23d9a5;
   text-decoration: none;
   margin: 1em;
+  font-family: "Roboto", sans-serif;
 }

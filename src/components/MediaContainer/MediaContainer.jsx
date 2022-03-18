@@ -20,5 +20,9 @@ export const MediaContainer = () => {
       console.log("we have this error: ", error);
     }
   }, []);
-  return <MediaList movies={movies} />;
+  return (
+    <div>
+      <MediaList movies={movies} />;
+    </div>
+  );
 };
