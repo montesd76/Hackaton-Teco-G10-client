@@ -41,7 +41,7 @@ class Login2 extends React.Component {
       errorMsg: ""
     });
 
-    axios.post(urlApiLogin, this.state.form).then(response => {
+    axios.post(urlApiLogin, this.state.form,  { withCredentials: true }).then(response => {
       //if response code 200, redirect to home page
       console.log(response);
       //if (response.status === 200) {
