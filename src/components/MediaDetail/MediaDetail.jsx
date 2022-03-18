@@ -1,18 +1,19 @@
 import ReactPlayer from "react-player";
+import "./MediaDetail.css";
 
 export const MediaDetail = ({ film }) => {
-  console.log(film);
   return (
-    <div>
-      <ReactPlayer
-        url={film.url}
-        width="640px"
-        height="360px"
-        controls
-        playing
-      ></ReactPlayer>
-      <h2>{film.titulo}</h2>
-      <p>{film.descripcion}</p>
+    <div className="media-container">
+      <div className="video-container">
+        <ReactPlayer url={film.url} controls playing />
+      </div>
+
+      <h2 className="media-title">
+        {film.titulo}
+      </h2>
+      <p className="media-description">
+        {film.descripcion}
+      </p>
     </div>
   );
 };
