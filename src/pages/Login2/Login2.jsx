@@ -1,111 +1,78 @@
 import React from "react";
+import { useEffect, useState } from "react";
+
 import "./Login2.css";
 import logo from "./logo.png";
 import axios from "axios";
 import { urlApiLogin } from "../../services/urls";
 
-class Login2 extends React.Component {
-
-  state = {
-    form: {
-      email: "",
-      password: ""
-    },
+const Login2 = () => {
+  const [form, setForm] = useState({
+    email: "",
+    password: ""
+  });
+  const [error, setError] = useState({
     error: false,
     errorCode: "",
     errorMsg: ""
-  };
+  });
 
+  const submitChange = (event) => {
+    setForm({
+      ...form,
+      [event.target.name]: event.target.value
+    });
+  }
 
-  submitHandler = (event) => {
+  const submitHandler = (event) => {
     event.preventDefault();
     console.log("submit");
   }
 
-  submitChange = async (event) => {
-    await this.setState({
-      form: {
-        ...this.state.form,
-        [event.target.name]: event.target.value
-      }
-    });
-    console.log(this.state.form);
-  }
+  const login = async () => {
 
-  buttonHandler = (event) => {
-    event.preventDefault();
-
-    this.setState({
-      error: false,
-      errorCode: "",
-      errorMsg: ""
-    });
-
-    axios.post(urlApiLogin, this.state.form,  { withCredentials: true }).then(response => {
-      //if response code 200, redirect to home page
+    try {
+      const response = await axios.post(urlApiLogin, form, { withCredentials: true });
       console.log(response);
-      //if (response.status === 200) {
-      //  this.props.history.push("/");
-      //}
-
-
-
       if (response.status === 200) {
-       window.location.href = "/home";
+        window.location.href = "/home";
       }
+    } catch (error) {
+      console.log(error);
+      setError({
+        error: true,
+        errorCode: error.response.status,
+        errorMsg: error.response.data.message
+      });
+    }
+  };
 
+  return (
+    <React.Fragment>
+      <div className="wrapper fadeInDown">
+        <div id="formContent">
 
-    }).catch(error => {
-      if (error.response) {
-        this.setState({
-          error: true,
-          errorCode: error.response.data.status,
-          errorMsg: error.response.data.message
-        });
-      } else {
+          <div className="fadeIn first">
+            <img src={logo} id="icon" alt="User Icon" />
+          </div>
 
-        this.setState({
-          error: true,
-          errorMsg: error.message
-        });
-
-      }
-    });
-  }
-
-
-
-
-
-
-  render() {
-    return (
-      <React.Fragment>
-        <div className="wrapper fadeInDown">
-          <div id="formContent">
-
-            <div className="fadeIn first">
-              <img src={logo} id="icon" alt="User Icon" />
-            </div>
-
-            <form onSubmit={this.submitHandler}>
-              <input type="text" className="fadeIn second" name="email" placeholder="login" onChange={this.submitChange} />
-              <input type="password" className="fadeIn third" name="password" placeholder="password" onChange={this.submitChange} />
-              <input type="submit" className="fadeIn fourth" value="Log In" onClick={this.buttonHandler} />
-            </form>
-            <div className="error">
-              {this.state.error ? (
-                <div>
-                  <p>{this.state.errorMsg}</p>
-                  <p>Por favor intente nuevamente. </p>
-                </div>
-              ) : null}
-            </div>
+          <form onSubmit={submitHandler}>
+            <input type="text" className="fadeIn second" name="email" placeholder="login" onChange={submitChange} />
+            <input type="password" className="fadeIn third" name="password" placeholder="password" onChange={submitChange} />
+            <input type="submit" className="fadeIn fourth" value="Log In" onClick={login} />
+          </form>
+          <div className="error">
+            {error.error && (
+              <div>
+                <p>{error.errorMsg}</p>
+                <p>Por favor intente nuevamente. </p>
+              </div>
+            )}
           </div>
         </div>
-      </ React.Fragment>
-    );
-  }
+      </div>
+    </ React.Fragment>
+  );
 }
 
 export { Login2 };

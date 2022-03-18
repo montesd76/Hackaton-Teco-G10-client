@@ -4,10 +4,8 @@ import { Footer } from "./components/Footer/Footer";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Error } from "./pages/Error/Error";
 import { Home } from "./pages/Home/Home";
-import { Login } from "./pages/Login/Login";
 import { Player } from "./pages/Player/Player";
 import { Login2 } from "./pages/Login2/Login2";
-import { Swapper } from "./pages/Swapper/Swapper";
 
 function App() {
   return (
@@ -15,11 +13,10 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Login />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/player/:movieID" element={<Player />} />
           <Route path="/player" element={<Player />} />
-          <Route path="/Swap" element={<Swapper />} />
           <Route path="/login" element={<Login2 />} />
           <Route path="*" element={<Error />} />
         </Routes>
