@@ -5,10 +5,10 @@ export const NavBar = () => {
     <div className="navBarContainer">
       <div className="navBar">
         <NavLink to="/home" className="navLink">
-          Inicio
+          INICIO
         </NavLink>
         <NavLink to="/" className="navLink">
-          Salir
+          SALIR
         </NavLink>
       </div>
     </div>

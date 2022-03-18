@@ -2,7 +2,7 @@ import { MediaItem } from "../MediaItem/MediaItem";
 
 export const MediaList = ({ movies }) => {
   return (
-    <div>
+    <div className="">
       <div className="card-container">
         <div className="card-container-card">
           {movies.map((movie) => (
