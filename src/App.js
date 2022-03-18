@@ -4,7 +4,6 @@ import { Footer } from "./components/Footer/Footer";
 import { NavBar } from "./components/NavBar/NavBar";
 import { Error } from "./pages/Error/Error";
 import { Home } from "./pages/Home/Home";
-import { Login } from "./pages/Login/Login";
 import { Player } from "./pages/Player/Player";
 import { Login2 } from "./pages/Login2/Login2";
 

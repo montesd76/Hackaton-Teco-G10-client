@@ -4,12 +4,24 @@ export const NavBar = () => {
   return (
     <div className="navBarContainer">
       <div className="navBar">
-        <NavLink to="/home" className="navLink">
-          Inicio
-        </NavLink>
-        <NavLink to="/" className="navLink">
-          Salir
-        </NavLink>
+        {
+          console.log(window.location.pathname)}
+          {
+          window.location.pathname != "/login" ? (
+            <>
+              <NavLink to="/home" className="navLink">
+                Inicio
+              </NavLink>
+              <NavLink to="/login" className="navLink">
+                Salir
+              </NavLink>
+              </>
+            )
+            : (
+              null
+            )
+        }
+
       </div>
     </div>
   );
