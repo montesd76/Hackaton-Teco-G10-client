@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/player" element={<Player />} />
+          <Route path="/player/:movieID" element={<Player />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
