@@ -1,3 +1,9 @@
+import logos from "../../assets/img/logos.png";
+import "./Footer.css";
 export const Footer = () => {
-  return <h1>Soy el footer</h1>;
+  return (
+    <div className="footerContainer">
+      <img src={logos} className="footerImg" alt="logosFooter" />
+    </div>
+  );
 };

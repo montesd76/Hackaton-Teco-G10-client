@@ -1,10 +1,19 @@
-.ul {
+.navBarContainer {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
+  justify-content: space-between;
+
+  padding: 2rem 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(30, 190, 9, 0.24);
 }
+
+.navBar {
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 .navLink {
   color: white;
   text-decoration: none;
-  margin: 2em;
+  margin: 1em;
 }
