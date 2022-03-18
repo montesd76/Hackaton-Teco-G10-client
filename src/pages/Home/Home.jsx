@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import img from "../../assets/img/imgFondo.png";
 import "./Home.css";
@@ -35,3 +36,14 @@ class Home extends React.Component {
   }
 }
 export { Home };
+=======
+import { MediaContainer } from "../../components/MediaContainer/MediaContainer";
+import "./Home.css";
+export const Home = () => {
+  return (
+    <div className="header">
+      <MediaContainer />
+    </div>
+  );
+};
+>>>>>>> 63121c1bc17030f9f1d34b5e747e31551db3521e

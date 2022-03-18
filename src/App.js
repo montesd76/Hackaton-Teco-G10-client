@@ -17,6 +17,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/player/:movieID" element={<Player />} />
           <Route path="/player" element={<Player />} />
           <Route path="/Swap" element={<Swapper />} />
           <Route path="/login" element={<Login2 />} />
