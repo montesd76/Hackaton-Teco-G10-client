@@ -1,10 +1,10 @@
-<<<<<<< HEAD
+
 import React from "react";
 import img from "../../assets/img/imgFondo.png";
 import "./Home.css";
 import axios from "axios";
 import { urlGetContent } from "../../services/urls";
-
+import { MediaContainer } from "../../components/MediaContainer/MediaContainer";
 
 
 class Home extends React.Component {
@@ -22,6 +22,9 @@ class Home extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <div className="header">
+          <MediaContainer />
+        </div>
       <div className="header">
         <div className="header-content">
           <img className="image" src={img} alt="foto" />
@@ -36,14 +39,3 @@ class Home extends React.Component {
   }
 }
 export { Home };
-=======
-import { MediaContainer } from "../../components/MediaContainer/MediaContainer";
-import "./Home.css";
-export const Home = () => {
-  return (
-    <div className="header">
-      <MediaContainer />
-    </div>
-  );
-};
->>>>>>> 63121c1bc17030f9f1d34b5e747e31551db3521e
