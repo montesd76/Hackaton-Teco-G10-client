@@ -7,18 +7,18 @@ export const NavBar = () => {
         {
           console.log(window.location.pathname)}
           {
-          window.location.pathname != "/login" && window.location.pathname != "/" ? (
-            <>
-              <NavLink to="/home" className="navLink">
-                Inicio
-              </NavLink>
-              <NavLink to="/login" className="navLink">
-                Salir
-              </NavLink>
-              </>
+          window.location.pathname === "/login" || window.location.pathname === "/" ? (
+            null
             )
             : (
-              null
+              <>
+              <NavLink to="/home" className="navLink">
+                INICIO
+              </NavLink>
+              <NavLink to="/login" className="navLink">
+                SALIR
+              </NavLink>
+              </>
             )
         }
 

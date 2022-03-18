@@ -10,7 +10,7 @@ export const MediaItem = ({ movie }) => {
       <div className="card-full">
         <div className="card-top">
           <img
-            src="https://iphone-image.apkpure.com/v2/app/5/0/1/501be331b8e210aa426a6b1d74401efb.jpg"
+            src={movie.ImagenPosterVertical}
             alt="foto"
           />
           <Link to={`/player/${movie.id}`}>Ver</Link>
