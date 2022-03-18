@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Login2 />} />
           <Route path="/home" element={<Home />} />
           <Route path="/player/:movieID" element={<Player />} />
           <Route path="/player" element={<Player />} />
