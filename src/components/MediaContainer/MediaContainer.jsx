@@ -8,8 +8,9 @@ export const MediaContainer = () => {
   useEffect(() => {
     const getMedia = async () => {
       const response = await axios.get(
-        "https://miniflow2022.herokuapp.com/api/contents"
+        "https://miniflow2022.herokuapp.com/insecure/api/contents"
       );
+      console.log("soy la response general", response);
       const data = response.data;
       setMovies(data);
     };
