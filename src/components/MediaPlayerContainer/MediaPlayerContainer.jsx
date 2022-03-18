@@ -14,7 +14,7 @@ export const MediaPlayerContainer = () => {
       const data = response.data;
         console.log(data);
 
-      setFilm(data);
+      setFilm(data[0]);
     };
     getFilm();
   }, [movieID]);
